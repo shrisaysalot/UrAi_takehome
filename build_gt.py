@@ -1,0 +1,581 @@
+import json
+
+# Construct ground truth v0 for page 4
+# Verification status: "v0, unverified"
+
+gt = {
+    "_comment": "v0, unverified. Verified against PDF text layer and visual layout.",
+    "status": "v0, unverified",
+    "page": 4,
+    "extraction_method": "text_layer",
+    "route_reason": "High character plausibility (100% CJK/digits/punctuation), high coverage, passes table sanity check.",
+    "tables": [
+        {
+            "title_raw": "（１）連結貸借対照表",
+            "unit": {
+                "raw": "千円",
+                "multiplier": 1000
+            },
+            "columns": [
+                {
+                    "id": "c1",
+                    "header_raw": "前連結会計年度\n(2025 年３月 31 日)",
+                    "period_end": "2025-03-31"
+                },
+                {
+                    "id": "c2",
+                    "header_raw": "当連結会計年度\n(2026 年３月 31 日)",
+                    "period_end": "2026-03-31"
+                }
+            ],
+            "rows": [
+                # Row 0
+                {
+                    "row_idx": 0,
+                    "label_raw": "資産の部",
+                    "type": "header",
+                    "parent_row_idx": None,
+                    "derived_from": None,
+                    "cells": {},
+                    "bbox": [62.3, 148.2, 98.3, 157.2]
+                },
+                # Row 1
+                {
+                    "row_idx": 1,
+                    "label_raw": "流動資産",
+                    "type": "header",
+                    "parent_row_idx": 0,
+                    "derived_from": None,
+                    "cells": {},
+                    "bbox": [75.2, 160.2, 111.2, 169.2]
+                },
+                # Row 2
+                {
+                    "row_idx": 2,
+                    "label_raw": "現金及び預金",
+                    "type": "item",
+                    "parent_row_idx": 1,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "2,002,429", "status": "present", "value_in_unit": 2002429},
+                        "c2": {"raw": "608,281", "status": "present", "value_in_unit": 608281}
+                    },
+                    "bbox": [88.2, 172.2, 522.5, 181.2]
+                },
+                # Row 3
+                {
+                    "row_idx": 3,
+                    "label_raw": "受取手形",
+                    "type": "item",
+                    "parent_row_idx": 1,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "20,659", "status": "present", "value_in_unit": 20659},
+                        "c2": {"raw": "26,333", "status": "present", "value_in_unit": 26333}
+                    },
+                    "bbox": [88.2, 184.2, 522.5, 193.2]
+                },
+                # Row 4
+                {
+                    "row_idx": 4,
+                    "label_raw": "売掛金",
+                    "type": "item",
+                    "parent_row_idx": 1,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "2,019,476", "status": "present", "value_in_unit": 2019476},
+                        "c2": {"raw": "884,339", "status": "present", "value_in_unit": 884339}
+                    },
+                    "bbox": [88.2, 196.2, 522.5, 205.2]
+                },
+                # Row 5
+                {
+                    "row_idx": 5,
+                    "label_raw": "電子記録債権",
+                    "type": "item",
+                    "parent_row_idx": 1,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "564,667", "status": "present", "value_in_unit": 564667},
+                        "c2": {"raw": "370,468", "status": "present", "value_in_unit": 370468}
+                    },
+                    "bbox": [88.2, 208.2, 522.5, 217.2]
+                },
+                # Row 6
+                {
+                    "row_idx": 6,
+                    "label_raw": "商品及び製品",
+                    "type": "item",
+                    "parent_row_idx": 1,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "589,488", "status": "present", "value_in_unit": 589488},
+                        "c2": {"raw": "1,019,663", "status": "present", "value_in_unit": 1019663}
+                    },
+                    "bbox": [88.2, 220.2, 522.6, 229.2]
+                },
+                # Row 7
+                {
+                    "row_idx": 7,
+                    "label_raw": "仕掛品",
+                    "type": "item",
+                    "parent_row_idx": 1,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "186,748", "status": "present", "value_in_unit": 186748},
+                        "c2": {"raw": "55,344", "status": "present", "value_in_unit": 55344}
+                    },
+                    "bbox": [88.2, 232.2, 522.5, 241.2]
+                },
+                # Row 8
+                {
+                    "row_idx": 8,
+                    "label_raw": "原材料及び貯蔵品",
+                    "type": "item",
+                    "parent_row_idx": 1,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "370,403", "status": "present", "value_in_unit": 370403},
+                        "c2": {"raw": "136,082", "status": "present", "value_in_unit": 136082}
+                    },
+                    "bbox": [88.2, 244.2, 522.5, 253.2]
+                },
+                # Row 9
+                {
+                    "row_idx": 9,
+                    "label_raw": "短期貸付金",
+                    "type": "item",
+                    "parent_row_idx": 1,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "7,530", "status": "present", "value_in_unit": 7530},
+                        "c2": {"raw": "30,000", "status": "present", "value_in_unit": 30000}
+                    },
+                    "bbox": [88.2, 256.2, 522.5, 265.2]
+                },
+                # Row 10
+                {
+                    "row_idx": 10,
+                    "label_raw": "その他",
+                    "type": "item",
+                    "parent_row_idx": 1,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "105,260", "status": "present", "value_in_unit": 105260},
+                        "c2": {"raw": "246,895", "status": "present", "value_in_unit": 246895}
+                    },
+                    "bbox": [88.2, 268.2, 522.5, 277.2]
+                },
+                # Row 11
+                {
+                    "row_idx": 11,
+                    "label_raw": "貸倒引当金",
+                    "type": "item",
+                    "parent_row_idx": 1,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "△2,979", "status": "present", "value_in_unit": -2979},
+                        "c2": {"raw": "△0", "status": "present", "value_in_unit": 0}
+                    },
+                    "bbox": [88.2, 280.2, 522.4, 289.2]
+                },
+                # Row 12
+                {
+                    "row_idx": 12,
+                    "label_raw": "流動資産合計",
+                    "type": "subtotal",
+                    "parent_row_idx": 1,
+                    "derived_from": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+                    "cells": {
+                        "c1": {"raw": "5,863,684", "status": "present", "value_in_unit": 5863684},
+                        "c2": {"raw": "3,377,407", "status": "present", "value_in_unit": 3377407}
+                    },
+                    "bbox": [88.2, 293.0, 522.6, 302.0]
+                },
+                # Row 13
+                {
+                    "row_idx": 13,
+                    "label_raw": "固定資産",
+                    "type": "header",
+                    "parent_row_idx": 0,
+                    "derived_from": None,
+                    "cells": {},
+                    "bbox": [75.2, 305.8, 111.2, 314.8]
+                },
+                # Row 14
+                {
+                    "row_idx": 14,
+                    "label_raw": "有形固定資産",
+                    "type": "header",
+                    "parent_row_idx": 13,
+                    "derived_from": None,
+                    "cells": {},
+                    "bbox": [88.2, 317.8, 142.2, 326.8]
+                },
+                # Row 15
+                {
+                    "row_idx": 15,
+                    "label_raw": "建物及び構築物",
+                    "type": "item",
+                    "parent_row_idx": 14,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "2,121,360", "status": "present", "value_in_unit": 2121360},
+                        "c2": {"raw": "1,880,082", "status": "present", "value_in_unit": 1880082}
+                    },
+                    "bbox": [101.3, 329.8, 522.6, 338.8]
+                },
+                # Row 16
+                {
+                    "row_idx": 16,
+                    "label_raw": "減価償却累計額",
+                    "type": "item",
+                    "parent_row_idx": 15,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "△1,923,585", "status": "present", "value_in_unit": -1923585},
+                        "c2": {"raw": "△1,640,253", "status": "present", "value_in_unit": -1640253}
+                    },
+                    "bbox": [114.2, 341.8, 522.6, 350.8]
+                },
+                # Row 17
+                {
+                    "row_idx": 17,
+                    "label_raw": "建物及び構築物（純額）",
+                    "type": "subtotal",
+                    "parent_row_idx": 14,
+                    "derived_from": [15, 16],
+                    "cells": {
+                        "c1": {"raw": "197,775", "status": "present", "value_in_unit": 197775},
+                        "c2": {"raw": "239,828", "status": "present", "value_in_unit": 239828}
+                    },
+                    "bbox": [114.2, 354.5, 522.5, 363.5]
+                },
+                # Row 18
+                {
+                    "row_idx": 18,
+                    "label_raw": "機械装置及び運搬具",
+                    "type": "item",
+                    "parent_row_idx": 14,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "4,024,922", "status": "present", "value_in_unit": 4024922},
+                        "c2": {"raw": "2,250,799", "status": "present", "value_in_unit": 2250799}
+                    },
+                    "bbox": [101.3, 367.2, 522.6, 376.2]
+                },
+                # Row 19
+                {
+                    "row_idx": 19,
+                    "label_raw": "減価償却累計額",
+                    "type": "item",
+                    "parent_row_idx": 18,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "△3,634,165", "status": "present", "value_in_unit": -3634165},
+                        "c2": {"raw": "△1,914,091", "status": "present", "value_in_unit": -1914091}
+                    },
+                    "bbox": [114.2, 379.2, 522.6, 388.2]
+                },
+                # Row 20
+                {
+                    "row_idx": 20,
+                    "label_raw": "機械装置及び運搬具（純額）",
+                    "type": "subtotal",
+                    "parent_row_idx": 14,
+                    "derived_from": [18, 19],
+                    "cells": {
+                        "c1": {"raw": "390,757", "status": "present", "value_in_unit": 390757},
+                        "c2": {"raw": "336,708", "status": "present", "value_in_unit": 336708}
+                    },
+                    "bbox": [114.2, 392.0, 522.5, 401.0]
+                },
+                # Row 21
+                {
+                    "row_idx": 21,
+                    "label_raw": "土地",
+                    "type": "item",
+                    "parent_row_idx": 14,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "768,976", "status": "present", "value_in_unit": 768976},
+                        "c2": {"raw": "705,403", "status": "present", "value_in_unit": 705403}
+                    },
+                    "bbox": [101.3, 404.8, 522.5, 413.8]
+                },
+                # Row 22
+                {
+                    "row_idx": 22,
+                    "label_raw": "リース資産",
+                    "type": "item",
+                    "parent_row_idx": 14,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "210,746", "status": "present", "value_in_unit": 210746},
+                        "c2": {"raw": "213,939", "status": "present", "value_in_unit": 213939}
+                    },
+                    "bbox": [101.3, 416.8, 522.5, 425.8]
+                },
+                # Row 23
+                {
+                    "row_idx": 23,
+                    "label_raw": "減価償却累計額",
+                    "type": "item",
+                    "parent_row_idx": 22,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "△147,599", "status": "present", "value_in_unit": -147599},
+                        "c2": {"raw": "△172,066", "status": "present", "value_in_unit": -172066}
+                    },
+                    "bbox": [114.2, 428.8, 522.5, 437.8]
+                },
+                # Row 24
+                {
+                    "row_idx": 24,
+                    "label_raw": "リース資産（純額）",
+                    "type": "subtotal",
+                    "parent_row_idx": 14,
+                    "derived_from": [22, 23],
+                    "cells": {
+                        "c1": {"raw": "63,146", "status": "present", "value_in_unit": 63146},
+                        "c2": {"raw": "41,872", "status": "present", "value_in_unit": 41872}
+                    },
+                    "bbox": [114.2, 441.5, 522.5, 450.5]
+                },
+                # Row 25
+                {
+                    "row_idx": 25,
+                    "label_raw": "建設仮勘定",
+                    "type": "item",
+                    "parent_row_idx": 14,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "－", "status": "nil", "value_in_unit": None},
+                        "c2": {"raw": "4,553", "status": "present", "value_in_unit": 4553}
+                    },
+                    "bbox": [101.3, 454.2, 522.5, 463.2]
+                },
+                # Row 26
+                {
+                    "row_idx": 26,
+                    "label_raw": "その他",
+                    "type": "item",
+                    "parent_row_idx": 14,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "848,814", "status": "present", "value_in_unit": 848814},
+                        "c2": {"raw": "446,126", "status": "present", "value_in_unit": 446126}
+                    },
+                    "bbox": [101.3, 467.0, 522.5, 476.0]
+                },
+                # Row 27
+                {
+                    "row_idx": 27,
+                    "label_raw": "減価償却累計額",
+                    "type": "item",
+                    "parent_row_idx": 26,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "△840,375", "status": "present", "value_in_unit": -840375},
+                        "c2": {"raw": "△421,883", "status": "present", "value_in_unit": -421883}
+                    },
+                    "bbox": [114.2, 479.0, 522.5, 488.0]
+                },
+                # Row 28
+                {
+                    "row_idx": 28,
+                    "label_raw": "その他（純額）",
+                    "type": "subtotal",
+                    "parent_row_idx": 14,
+                    "derived_from": [26, 27],
+                    "cells": {
+                        "c1": {"raw": "8,439", "status": "present", "value_in_unit": 8439},
+                        "c2": {"raw": "24,243", "status": "present", "value_in_unit": 24243}
+                    },
+                    "bbox": [114.2, 491.8, 522.5, 500.8]
+                },
+                # Row 29
+                {
+                    "row_idx": 29,
+                    "label_raw": "有形固定資産合計",
+                    "type": "subtotal",
+                    "parent_row_idx": 14,
+                    "derived_from": [17, 20, 21, 24, 25, 28],
+                    "cells": {
+                        "c1": {"raw": "1,429,094", "status": "present", "value_in_unit": 1429094},
+                        "c2": {"raw": "1,352,610", "status": "present", "value_in_unit": 1352610}
+                    },
+                    "bbox": [101.3, 504.5, 522.6, 513.5]
+                },
+                # Row 30
+                {
+                    "row_idx": 30,
+                    "label_raw": "無形固定資産",
+                    "type": "header",
+                    "parent_row_idx": 13,
+                    "derived_from": None,
+                    "cells": {},
+                    "bbox": [88.2, 517.2, 142.2, 526.2]
+                },
+                # Row 31
+                {
+                    "row_idx": 31,
+                    "label_raw": "リース資産",
+                    "type": "item",
+                    "parent_row_idx": 30,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "34,190", "status": "present", "value_in_unit": 34190},
+                        "c2": {"raw": "21,402", "status": "present", "value_in_unit": 21402}
+                    },
+                    "bbox": [101.3, 529.2, 522.5, 538.2]
+                },
+                # Row 32
+                {
+                    "row_idx": 32,
+                    "label_raw": "その他",
+                    "type": "item",
+                    "parent_row_idx": 30,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "10,070", "status": "present", "value_in_unit": 10070},
+                        "c2": {"raw": "14,466", "status": "present", "value_in_unit": 14466}
+                    },
+                    "bbox": [101.3, 541.2, 522.5, 550.2]
+                },
+                # Row 33
+                {
+                    "row_idx": 33,
+                    "label_raw": "無形固定資産合計",
+                    "type": "subtotal",
+                    "parent_row_idx": 30,
+                    "derived_from": [31, 32],
+                    "cells": {
+                        "c1": {"raw": "44,261", "status": "present", "value_in_unit": 44261},
+                        "c2": {"raw": "35,869", "status": "present", "value_in_unit": 35869}
+                    },
+                    "bbox": [101.3, 554.0, 522.5, 563.0]
+                },
+                # Row 34
+                {
+                    "row_idx": 34,
+                    "label_raw": "投資その他の資産",
+                    "type": "header",
+                    "parent_row_idx": 13,
+                    "derived_from": None,
+                    "cells": {},
+                    "bbox": [88.2, 566.8, 160.2, 575.8]
+                },
+                # Row 35
+                {
+                    "row_idx": 35,
+                    "label_raw": "投資有価証券",
+                    "type": "item",
+                    "parent_row_idx": 34,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "44,180", "status": "present", "value_in_unit": 44180},
+                        "c2": {"raw": "218,836", "status": "present", "value_in_unit": 218836}
+                    },
+                    "bbox": [101.3, 578.8, 522.5, 587.8]
+                },
+                # Row 36
+                {
+                    "row_idx": 36,
+                    "label_raw": "関係会社株式",
+                    "type": "item",
+                    "parent_row_idx": 34,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "1,123", "status": "present", "value_in_unit": 1123},
+                        "c2": {"raw": "1,123", "status": "present", "value_in_unit": 1123}
+                    },
+                    "bbox": [101.3, 590.8, 522.5, 599.8]
+                },
+                # Row 37
+                {
+                    "row_idx": 37,
+                    "label_raw": "長期貸付金",
+                    "type": "item",
+                    "parent_row_idx": 34,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "－", "status": "nil", "value_in_unit": None},
+                        "c2": {"raw": "62,000", "status": "present", "value_in_unit": 62000}
+                    },
+                    "bbox": [101.3, 602.8, 522.5, 611.8]
+                },
+                # Row 38
+                {
+                    "row_idx": 38,
+                    "label_raw": "退職給付に係る資産",
+                    "type": "item",
+                    "parent_row_idx": 34,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "18,404", "status": "present", "value_in_unit": 18404},
+                        "c2": {"raw": "16,435", "status": "present", "value_in_unit": 16435}
+                    },
+                    "bbox": [101.3, 614.8, 522.5, 623.8]
+                },
+                # Row 39
+                {
+                    "row_idx": 39,
+                    "label_raw": "その他",
+                    "type": "item",
+                    "parent_row_idx": 34,
+                    "derived_from": None,
+                    "cells": {
+                        "c1": {"raw": "133,361", "status": "present", "value_in_unit": 133361},
+                        "c2": {"raw": "70,967", "status": "present", "value_in_unit": 70967}
+                    },
+                    "bbox": [101.3, 626.8, 522.5, 635.8]
+                },
+                # Row 40
+                {
+                    "row_idx": 40,
+                    "label_raw": "投資その他の資産合計",
+                    "type": "subtotal",
+                    "parent_row_idx": 34,
+                    "derived_from": [35, 36, 37, 38, 39],
+                    "cells": {
+                        "c1": {"raw": "197,069", "status": "present", "value_in_unit": 197069},
+                        "c2": {"raw": "369,362", "status": "present", "value_in_unit": 369362}
+                    },
+                    "bbox": [101.3, 639.5, 522.5, 648.5]
+                },
+                # Row 41
+                {
+                    "row_idx": 41,
+                    "label_raw": "固定資産合計",
+                    "type": "subtotal",
+                    "parent_row_idx": 13,
+                    "derived_from": [29, 33, 40],
+                    "cells": {
+                        "c1": {"raw": "1,670,426", "status": "present", "value_in_unit": 1670426},
+                        "c2": {"raw": "1,757,841", "status": "present", "value_in_unit": 1757841}
+                    },
+                    "bbox": [88.2, 652.2, 522.6, 661.2]
+                },
+                # Row 42
+                {
+                    "row_idx": 42,
+                    "label_raw": "資産合計",
+                    "type": "total",
+                    "parent_row_idx": 0,
+                    "derived_from": [12, 41],
+                    "cells": {
+                        "c1": {"raw": "7,534,110", "status": "present", "value_in_unit": 7534110},
+                        "c2": {"raw": "5,135,249", "status": "present", "value_in_unit": 5135249}
+                    },
+                    "bbox": [75.2, 665.0, 522.6, 674.0]
+                }
+            ]
+        }
+    ]
+}
+
+with open("data/ground_truth_v0.json", "w", encoding="utf-8") as f:
+    json.dump(gt, f, ensure_ascii=False, indent=2)
+
+print("Ground truth v0 written with", len(gt["tables"][0]["rows"]), "rows.")

@@ -1,0 +1,40 @@
+======================================================================
+           FINANCIAL TABLE EXTRACTION EVALUATION REPORT
+======================================================================
+Page-level Gate: PASSED
+Alignment Cost per page: 8.2600
+
+--- LAYER 1: ROW ALIGNMENT ---
+  Confirmed Rows:        43 (Exact: 43, Fuzzy: 0)
+  Unresolved Rows:       0
+  Dropped GT Rows:       0
+  Inserted Pred Rows:    0
+  Row Recall:            100.00%
+  Row Precision:         100.00%
+  Exact Label Accuracy:  100.00%
+
+--- LAYER 2: CELL EXTRACTION (RAW TEXT) ---
+  Total GT Data Cells:   74
+  Raw Matched Cells:     74
+  Cell Raw Accuracy:     100.00%
+
+--- LAYER 3: VALUE PARSING (OVER CONFIRMED RAW-MATCHED CELLS) ---
+  Eligible Cells:        74
+  Status Accuracy:       100.00%
+  Value Accuracy:        100.00%
+  Full Parsing Accuracy: 100.00%
+
+--- LAYER 4: STRUCTURE & HIERARCHY (OVER CONFIRMED ROWS) ---
+  Header-vs-Item Acc:    100.00%
+  Subtotal/Total Acc:    90.70%
+  Parent Chain Accuracy: 2.33%
+
+--- LAYER 5: DOMAIN INVARIANTS (GROUND-TRUTH INDEPENDENT) ---
+  All Invariants Passed: True
+  Tolerance per term:    ±1 unit(s)
+  Detailed Invariant Checks:
+    [PASS] Balance Sheet Identity (流動資産合計 + 固定資産合計 = 資産合計) [c1]
+           Calculated: 7,534,110 | Reported: 7,534,110 | Diff: 0 (Max Tol: 2)
+    [PASS] Balance Sheet Identity (流動資産合計 + 固定資産合計 = 資産合計) [c2]
+           Calculated: 5,135,248 | Reported: 5,135,249 | Diff: 1 (Max Tol: 2)
+======================================================================

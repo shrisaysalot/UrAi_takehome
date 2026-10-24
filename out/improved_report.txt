@@ -1,0 +1,76 @@
+======================================================================
+           FINANCIAL TABLE EXTRACTION EVALUATION REPORT
+======================================================================
+Page-level Gate: PASSED
+Alignment Cost per page: 0.0000
+
+--- LAYER 1: ROW ALIGNMENT ---
+  Confirmed Rows:        43 (Exact: 43, Fuzzy: 0)
+  Unresolved Rows:       0
+  Dropped GT Rows:       0
+  Inserted Pred Rows:    0
+  Row Recall:            100.00%
+  Row Precision:         100.00%
+  Exact Label Accuracy:  100.00%
+
+--- LAYER 2: CELL EXTRACTION (RAW TEXT) ---
+  Total GT Data Cells:   74
+  Raw Matched Cells:     74
+  Cell Raw Accuracy:     100.00%
+
+--- LAYER 3: VALUE PARSING (OVER CONFIRMED RAW-MATCHED CELLS) ---
+  Eligible Cells:        74
+  Status Accuracy:       100.00%
+  Value Accuracy:        100.00%
+  Full Parsing Accuracy: 100.00%
+
+--- LAYER 4: STRUCTURE & HIERARCHY (OVER CONFIRMED ROWS) ---
+  Header-vs-Item Acc:    100.00%
+  Subtotal/Total Acc:    100.00%
+  Parent Chain Accuracy: 100.00%
+
+--- LAYER 5: DOMAIN INVARIANTS (GROUND-TRUTH INDEPENDENT) ---
+  All Invariants Passed: True
+  Tolerance per term:    ±1 unit(s)
+  Detailed Invariant Checks:
+    [PASS] Balance Sheet Identity (流動資産合計 + 固定資産合計 = 資産合計) [c1]
+           Calculated: 7,534,110 | Reported: 7,534,110 | Diff: 0 (Max Tol: 2)
+    [PASS] Balance Sheet Identity (流動資産合計 + 固定資産合計 = 資産合計) [c2]
+           Calculated: 5,135,248 | Reported: 5,135,249 | Diff: 1 (Max Tol: 2)
+    [PASS] Net Asset Check (建物及び構築物（純額）) [c1]
+           Calculated: 197,775 | Reported: 197,775 | Diff: 0 (Max Tol: 2)
+    [PASS] Net Asset Check (建物及び構築物（純額）) [c2]
+           Calculated: 239,829 | Reported: 239,828 | Diff: 1 (Max Tol: 2)
+    [PASS] Net Asset Check (機械装置及び運搬具（純額）) [c1]
+           Calculated: 390,757 | Reported: 390,757 | Diff: 0 (Max Tol: 2)
+    [PASS] Net Asset Check (機械装置及び運搬具（純額）) [c2]
+           Calculated: 336,708 | Reported: 336,708 | Diff: 0 (Max Tol: 2)
+    [PASS] Net Asset Check (リース資産（純額）) [c1]
+           Calculated: 63,147 | Reported: 63,146 | Diff: 1 (Max Tol: 2)
+    [PASS] Net Asset Check (リース資産（純額）) [c2]
+           Calculated: 41,873 | Reported: 41,872 | Diff: 1 (Max Tol: 2)
+    [PASS] Net Asset Check (その他（純額）) [c1]
+           Calculated: 8,439 | Reported: 8,439 | Diff: 0 (Max Tol: 2)
+    [PASS] Net Asset Check (その他（純額）) [c2]
+           Calculated: 24,243 | Reported: 24,243 | Diff: 0 (Max Tol: 2)
+    [PASS] Section Sum (流動資産合計) [c1]
+           Calculated: 5,863,681 | Reported: 5,863,684 | Diff: 3 (Max Tol: 10)
+    [PASS] Section Sum (流動資産合計) [c2]
+           Calculated: 3,377,405 | Reported: 3,377,407 | Diff: 2 (Max Tol: 10)
+    [PASS] Section Sum (有形固定資産合計) [c1]
+           Calculated: 1,429,093 | Reported: 1,429,094 | Diff: 1 (Max Tol: 5)
+    [PASS] Section Sum (有形固定資産合計) [c2]
+           Calculated: 1,352,607 | Reported: 1,352,610 | Diff: 3 (Max Tol: 6)
+    [PASS] Section Sum (無形固定資産合計) [c1]
+           Calculated: 44,260 | Reported: 44,261 | Diff: 1 (Max Tol: 2)
+    [PASS] Section Sum (無形固定資産合計) [c2]
+           Calculated: 35,868 | Reported: 35,869 | Diff: 1 (Max Tol: 2)
+    [PASS] Section Sum (投資その他の資産合計) [c1]
+           Calculated: 197,068 | Reported: 197,069 | Diff: 1 (Max Tol: 4)
+    [PASS] Section Sum (投資その他の資産合計) [c2]
+           Calculated: 369,361 | Reported: 369,362 | Diff: 1 (Max Tol: 5)
+    [PASS] Section Sum (固定資産合計) [c1]
+           Calculated: 1,670,424 | Reported: 1,670,426 | Diff: 2 (Max Tol: 3)
+    [PASS] Section Sum (固定資産合計) [c2]
+           Calculated: 1,757,841 | Reported: 1,757,841 | Diff: 0 (Max Tol: 3)
+======================================================================

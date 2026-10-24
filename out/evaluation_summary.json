@@ -1,0 +1,30 @@
+{
+  "baseline": {
+    "row_recall": 1.0,
+    "row_precision": 1.0,
+    "exact_label_accuracy": 1.0,
+    "cell_raw_accuracy": 1.0,
+    "parsing_accuracy": 1.0,
+    "header_vs_item_accuracy": 1.0,
+    "subtotal_total_accuracy": 0.907,
+    "parent_accuracy": 0.0233,
+    "invariants_all_passed": true,
+    "alignment_cost": 8.26
+  },
+  "improved": {
+    "row_recall": 1.0,
+    "row_precision": 1.0,
+    "exact_label_accuracy": 1.0,
+    "cell_raw_accuracy": 1.0,
+    "parsing_accuracy": 1.0,
+    "header_vs_item_accuracy": 1.0,
+    "subtotal_total_accuracy": 1.0,
+    "parent_accuracy": 1.0,
+    "invariants_all_passed": true,
+    "alignment_cost": 0.0
+  },
+  "ocr_route": {
+    "extraction_method": "ocr",
+    "route_reason": "Escalated to OCR/VLM stub: Low word count (0 words; expected >= 15); Empty text layer (scanned or image-only page); Insufficient numeric cell candidates (0 found; expected >= 5)"
+  }
+}

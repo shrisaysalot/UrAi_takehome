@@ -1,0 +1,22 @@
+{
+  "page": 4,
+  "extraction_method": "ocr",
+  "route_reason": "Escalated to OCR/VLM stub: Low word count (0 words; expected >= 15); Empty text layer (scanned or image-only page); Insufficient numeric cell candidates (0 found; expected >= 5)",
+  "confidence_flags": [
+    "escalate_to_ocr",
+    "text_layer_missing",
+    "low_char_plausibility"
+  ],
+  "tables": [
+    {
+      "title_raw": "OCR_STUB",
+      "unit": {
+        "raw": "千円",
+        "multiplier": 1000
+      },
+      "columns": [],
+      "rows": [],
+      "stub_note": "Escalated to OCR/VLM stub. Native text was rejected by router. OCR/VLM backend is stubbed in v1; real results not faked."
+    }
+  ]
+}
